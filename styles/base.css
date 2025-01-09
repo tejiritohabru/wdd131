@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    display: grid;
+    grid-template: auto 1fr auto / 800px 1fr auto;
+    color: #000; /* default text color */
+    background-color: #fff; /* default background color */ 
+    height: 135vh;
+}
+  header {
+    text-align: center;
+    padding: 0.2rem;
+    grid-column: 1 / 4;
+  }
+
+h1 {
+	text-align: center;
+	background-color: darkolivegreen;
+	padding: 1rem;
+	color: #fff;
+}
+
+.navigation {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #333;
+  color: #fff; /* added */
+	align-items: center;
+}
+.navigation li {
+	flex: 1 1 auto;
+} 
+.navigation a {
+  background-color: #000; /* added */
+	display: block;
+	color: #eee;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+}
+ .navigation a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+.card p {
+  position: absolute;
+  top: 220px;
+} 
+
+.card2 p {
+  position: absolute;
+  top: 480px;
+  right: 680px;
+} 
+
+.card2 h3 {
+  background-color: #fff;
+  font-size: 1.5rem; 
+  color: black;
+  text-align: center;
+  border: 1px solid #ddd; /* Subtle border */
+}
+
+.card2 img {
+  position: absolute;
+  top: 500px;
+  right: 1050px;
+}
+
+.card2 figcaption  {
+  position: absolute;
+  top: 620px;
+  right: 1050px;
+}
+
+main {
+  max-width: 1200px; /* Limits the width of the main element */
+  margin: 20px auto; /* Centers the main element horizontally */
+  padding: 10px; /* Adds some space around the content */
+  display: grid; /* Enables CSS Grid */
+  grid-template-columns: repeat(auto-fit, minmax(600px, 2fr)); /* Responsive grid layout */ 
+}
+
+.card {
+  background-color: #f9f9f9; /* Light background color */
+  color: black;
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  padding: 15px; /* Adds space inside the card */
+  text-align: end; /* Centers text within the card */
+}
+
+.card h2 {
+  font-size: 1.5rem; /* Slightly larger headings for cards */
+  color: white; /* Matches the header/footer color */
+  text-align: center;
+  background-color: darkolivegreen;
+}
+
+.card p, .card ul {
+  font-size: 1rem; /* Standard text size */
+  line-height: 1.5; /* Improves readability */
+  text-align: start;
+}
+
+footer {
+  background-color: darkolivegreen;
+  color: #fff; /* added */
+  padding: 1rem;
+  text-align: center;
+  grid-column: 1 / 4;
+} 
