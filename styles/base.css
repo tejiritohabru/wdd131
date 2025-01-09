@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-family: 'Roboto', 'Open Sans';
     display: grid;
     grid-template: auto 1fr auto / 800px 1fr auto;
     color: #000; /* default text color */
