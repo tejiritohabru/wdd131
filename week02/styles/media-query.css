@@ -1,0 +1,36 @@
+body {
+	font-family: acme, Arial, sans-serif;
+}
+
+header {
+    max-width: 640px;
+    text-align: center;
+    margin: 1rem auto;
+    border: 1px solid #000000;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    max-width: 640px;
+    text-align: center;
+    margin: 1rem auto;
+    border: 1px solid #000000;
+    padding: 1rem;
+    background-color: cadetblue;
+}
+footer {
+    max-width: 640px;
+    text-align: center;
+    margin: 1rem auto;
+    border: 1px solid #000000;
+    padding: 1rem;
+    background-color: cadetblue;
+}
+section {
+    padding: 1rem;
+    background-color: #f5f5f5;
+}
