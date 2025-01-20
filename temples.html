@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Tejiri Tohabru</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Tejiri Tohabru | About me home page">
+    <meta name="author" content="Tejiri Tohabru">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JavaScript File -->
+    <script src="scripts/temples.js" defer></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navigation = document.querySelector('.navigation');
+    
+        hamburger.addEventListener('click', () => {
+            navigation.classList.toggle('active');
+        });
+    </script>
+    
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button class="hamburger" aria-label="Open menu"> &#9776;</button>
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" title="Home">Home</a></li>
+                <li><a href="#" title="Old">Old</a></li>
+                <li><a href="#" title="New">New</a></li>
+                <li><a href="#" title="Large">Large</a></li>
+                <li><a href="#" title="Small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Album Section</h2>
+        <div class="album">
+            
+            <figure>
+                <img src="images/temple1.jpg" alt="Temple 1">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple2.jpg" alt="Temple 2">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple3.jpg" alt="Temple 3">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple4.jpg" alt="Temple 4">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple1.jpg" alt="Temple 5">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple2.jpg" alt="Temple 6">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple3.jpg" alt="Temple 7">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple4.jpg" alt="Temple 8">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple2.jpg" alt="Temple 9">
+                <figcaption>Ogden Utah Temple</figcaption>
+            </figure>
+        
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> &#127800; Tejiri Tohabru &#127800; Nigeria</p>
+    </footer>
+</body>
+</html>
