@@ -22,3 +22,5 @@ hamburgerButton.addEventListener("click", () => {
   const isActive = navigationMenu.classList.contains("visible");
   hamburgerButton.innerHTML = isActive ? "&#10005;" : "&#9776;"; // 'X' or hamburger icon
 });
+
+
