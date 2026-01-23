@@ -40,10 +40,8 @@ body {
     padding: 1rem;
 }
 
-.data {
-    position: absolute;
-    top: 150px;
-    left: 100px;
+.data,
+.weather {
     background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     margin: 1rem;
@@ -52,17 +50,23 @@ body {
     max-width: 400px;
 }
 
-.weather {
-    position: absolute;
-    top: 500px;
-    right: 90px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 8px;
-    flex: 1 1 300px;
-    max-width: 400px;
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .data,
+    .weather {
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
+
 
 section h2 {
     background-color: var(--secondary-color);
@@ -71,10 +75,11 @@ section h2 {
     border-radius: 5px;
 }
 
-.weather-icon::after {
-    content: "⛅";
+.weather-icon {
     margin-left: 0.5rem;
+    vertical-align: middle;
 }
+
 
 /* Footer */
 footer {
