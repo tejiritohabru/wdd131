@@ -1,0 +1,93 @@
+/* =====================
+   Color Scheme & Typography
+   ===================== */
+:root {
+  --primary-color: #d62828;  /* headings & links */
+  --secondary-color: #f77f00; /* accents, borders, backgrounds */
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 20px;
+  background-color: #fefae0;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: Georgia, serif;
+  color: var(--primary-color);
+}
+
+h2 {
+  margin-top: 1.5em;
+}
+
+p, li {
+  margin-bottom: 0.5em;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* =====================
+   Wireframe Styles
+   ===================== */
+.wireframe-container {
+  margin: 20px 0;
+}
+
+.wireframe-title {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.wireframe {
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed var(--secondary-color);
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #fff3e0;
+}
+
+.wireframe div {
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* Desktop wireframe layout */
+.desktop-wireframe {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.desktop-wireframe div {
+  flex: 1 1 30%;
+  margin: 5px;
+  min-height: 50px;
+}
+
+@media (max-width: 768px) {
+  .desktop-wireframe {
+    flex-direction: column;
+  }
+
+  .desktop-wireframe div {
+    flex: 1 1 100%;
+  }
+}
