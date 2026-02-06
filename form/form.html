@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Submit a product review with ratings, features, and feedback.">
+  <meta name="author" content="Tejiri Tohabru" />
+  <title>Product Review Form | WDD 131</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="form.js" defer></script>
+  <script src="lastmodified.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="page-header">
+  <h1>Product Review</h1>
+</header>
+
+<main class="form-wrapper">
+  <form method="get" action="review.html">
+
+    <!-- Product Name -->
+    <label for="product" class="required">Product Name</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Choose a Product ...</option>
+    </select>
+
+    <!-- Overall Rating -->
+    <fieldset class="rating">
+      <legend>Overall Rating</legend>
+      
+        <label class="required">Overall Rating</label>
+
+      <label><input type="radio" name="rating" value="1" required> ☆</label>
+      <label><input type="radio" name="rating" value="2"> ☆☆</label>
+      <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+      <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+      <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+
+    </fieldset>
+
+    <!-- Date -->
+    <label for="installDate" class="required">Date of Installation</label>
+    <input type="date" id="installDate" name="installDate" required>
+
+    <!-- Features -->
+    <fieldset>
+      <legend>Which features did you find useful in the product?</legend>
+      <p class="hint">(Check all that apply)</p>
+
+      <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+      <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+      <label><input type="checkbox" name="features" value="Design"> Design</label>
+    </fieldset>
+
+    <!-- Review -->
+    <label for="review">Written Review (Optional)</label>
+    <textarea id="review" name="review"></textarea>
+
+    <!-- Name -->
+    <label for="username">Your Name (Optional)</label>
+    <input type="text" id="username" name="username">
+
+    <!-- Submit -->
+    <input type="submit" value="Post Review">
+
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 🌼Tejiri Tohabru 🌼 2026 | WDD 131</p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer>
+    let count = localStorage.getItem("reviewCount") || 0;
+    count++;
+    localStorage.setItem("reviewCount", count);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("count").textContent = count;
+    });
+  </script>
+</head>
+<body>
+
+<main class="form-wrapper">
+  <h2>Thank You!</h2>
+  <p>Your review has been posted.</p>
+  <p>Total reviews submitted: <strong id="count"></strong></p>
+</main>
+
+<footer>
+     <p>
+         &copy; <span id="currentyear"></span> 🌼Tejiri Tohabru 🌼 Nigeria
+    </p>
+    <p id="lastModified"></p>
+</footer>
+</body>
+</html>

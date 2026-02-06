@@ -15,6 +15,10 @@ function calculateWindChill(temp, wind) {
 // Display wind chill
 document.getElementById("windchill").textContent = calculateWindChill(temperature, windSpeed);
 
-// Footer date information
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+// Get the current year
+const currentYear = new Date().getFullYear();
+document.getElementById('currentyear').textContent = currentYear;
+
+// Get the last modified date of the document
+const lastModified = document.lastModified;
+document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
