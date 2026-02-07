@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <meta name="description" content="Submit a product review with ratings, features, and feedback.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="description" content="Submit a product review with ratings, features, and feedback.">
   <meta name="author" content="Tejiri Tohabru" />
   <title>Product Review Form | WDD 131</title>
   <link rel="stylesheet" href="styles/form.css" />
@@ -24,22 +24,34 @@
     <!-- Product Name -->
     <label for="product" class="required">Product Name</label>
     <select id="product" name="product" required>
-      <option value="" disabled selected>Choose a Product ...</option>
+      <option value="" disabled selected>Select a Product ...</option>
     </select>
 
     <!-- Overall Rating -->
     <fieldset class="rating">
-      <legend>Overall Rating</legend>
-      
-        <label class="required">Overall Rating</label>
+  <legend>Overall Rating</legend>
 
-      <label><input type="radio" name="rating" value="1" required> ☆</label>
-      <label><input type="radio" name="rating" value="2"> ☆☆</label>
-      <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-      <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-      <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+  <label for="rate1">
+    <input type="radio" id="rate1" name="rating" value="1" required> ☆
+  </label>
 
-    </fieldset>
+  <label for="rate2">
+    <input type="radio" id="rate2" name="rating" value="2" required> ☆☆
+  </label>
+
+  <label for="rate3">
+    <input type="radio" id="rate3" name="rating" value="3" required> ☆☆☆
+  </label>
+
+  <label for="rate4">
+    <input type="radio" id="rate4" name="rating" value="4" required> ☆☆☆☆
+  </label>
+
+  <label for="rate5">
+    <input type="radio" id="rate5" name="rating" value="5" required> ☆☆☆☆☆
+  </label>
+</fieldset>
+
 
     <!-- Date -->
     <label for="installDate" class="required">Date of Installation</label>
@@ -50,10 +62,26 @@
       <legend>Which features did you find useful in the product?</legend>
       <p class="hint">(Check all that apply)</p>
 
-      <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-      <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-      <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-      <label><input type="checkbox" name="features" value="Design"> Design</label>
+     <label for="durability">
+      <input type="checkbox" id="durability" name="features" value="Durability">
+       Durability
+      </label>
+
+      <label for="ease">
+      <input type="checkbox" id="ease" name="features" value="Ease of Use">
+        Ease of Use
+        </label>
+
+      <label for="performance">
+      <input type="checkbox" id="performance" name="features" value="Performance">
+        Performance
+      </label>
+
+      <label for="design">
+      <input type="checkbox" id="design" name="features" value="Design">
+        Design
+      </label>
+
     </fieldset>
 
     <!-- Review -->

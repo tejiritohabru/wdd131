@@ -73,6 +73,13 @@ input[type="submit"]:hover {
   background-color: #ddd;
 }
 
+@media (max-width: 600px) {
+  .form-wrapper {
+    max-width: 90%;
+  }
+}
+
+
 footer {
   background-color: darkolivegreen;
   color: #fff; /* added */

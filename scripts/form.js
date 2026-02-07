@@ -11,21 +11,12 @@ products.forEach(product => {
   option.value = product.id;
   option.textContent = product.name;
   select.appendChild(option);
+});
 
-  let reviewCount = localStorage.getItem("reviewCount");
-
+// Review counter
+let reviewCount = localStorage.getItem("reviewCount");
 if (reviewCount === null) {
   reviewCount = 0;
 }
-
 reviewCount++;
 localStorage.setItem("reviewCount", reviewCount);
-
-document.getElementById("count").textContent = reviewCount;
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("lastModified").textContent = document.lastModified;
-});
-
-
-});
