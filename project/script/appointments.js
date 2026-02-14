@@ -1,54 +1,62 @@
-// appointments.js
+// ==========================
+// Appointment Form JS
+// ==========================
 
-const form = document.getElementById("appointmentForm");
-const thankYouDiv = document.getElementById("thank-you");
-const formWrapper = document.getElementById("form-wrapper");
-const countEl = document.getElementById("count");
-const recentList = document.getElementById("recent-appointments");
+document.addEventListener("DOMContentLoaded", () => {
 
-// Get existing count and names from localStorage
-let count = parseInt(localStorage.getItem("appointmentCount")) || 0;
-let recentAppointments = JSON.parse(localStorage.getItem("recentAppointments")) || [];
+  const form = document.getElementById("appointment-form");
+  const thankYou = document.getElementById("thank-you");
+  const countEl = document.getElementById("count");
+  const recentList = document.getElementById("recent-appointments");
 
-countEl.textContent = count;
-
-// Function to render recent appointment names
-function renderRecent() {
-  recentList.innerHTML = "";
-  // Show the last 5 submissions
-  const recent = recentAppointments.slice(-5).reverse();
-  recent.forEach(name => {
-    const li = document.createElement("li");
-    li.textContent = name;
-    recentList.appendChild(li);
-  });
-}
-
-// Initial render
-renderRecent();
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); // prevent page reload
-
-  const nameInput = form.name.value.trim();
-  if(!nameInput) return; // do not submit empty names
-
-  // Increment count and save in localStorage
-  count++;
-  localStorage.setItem("appointmentCount", count);
-
-  // Add name to recent appointments
-  recentAppointments.push(nameInput);
-  localStorage.setItem("recentAppointments", JSON.stringify(recentAppointments));
-
-  // Update UI
+  // Load existing appointments from localStorage
+  let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+  let count = appointments.length;
   countEl.textContent = count;
-  renderRecent();
 
-  // Hide form, show thank-you message
-  formWrapper.style.display = "none";
-  thankYouDiv.style.display = "block";
+  // Render recent appointments
+  function renderAppointments() {
+    recentList.innerHTML = "";
+    appointments.slice(-5).reverse().forEach((appt, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${appt.name} - ${appt.service} on ${appt.date}`;
+      recentList.appendChild(li);
+    });
+  }
 
-  // Reset form
-  form.reset();
+  renderAppointments();
+
+  // Handle form submission
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Get form values
+    const newAppointment = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      service: form.service.value,
+      date: form.date.value,
+      notes: form.notes.value
+    };
+
+    // Save to appointments array and localStorage
+    appointments.push(newAppointment);
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+
+    // Update count
+    count = appointments.length;
+    countEl.textContent = count;
+
+    // Show thank you message and hide form
+    form.style.display = "none";
+    thankYou.style.display = "block";
+
+    // Render recent appointments
+    renderAppointments();
+
+    // Optional: reset form if you want it hidden then ready again
+    form.reset();
+  });
+
 });
