@@ -160,6 +160,110 @@ nav a:hover {
   color: #eee;
 }
 
+/* Service Cards*/
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+.service-card-rect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(20,20,20,0.85);
+  color: #fefae0;
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card-rect h3 {
+  font-family: Georgia, serif;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.service-card-rect p {
+  font-family: Verdana, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-left: 30px; /* spacing from heading if horizontal layout */
+}
+
+/* Hover effect */
+.service-card-rect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .service-card-rect {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-card-rect p {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+
+/* Homepage Card*/
+.card-rect {
+  display: flex;
+  background-color: rgba(20,20,20,0.85);
+  color: #fefae0;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  gap: 30px;
+}
+
+.card-rect h2 {
+  font-family: Georgia, serif;
+  color: #d4af37; /* gold accent */
+  margin-bottom: 15px;
+}
+
+.card-rect p {
+  font-family: Verdana, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Content wrapper for horizontal layout */
+.card-rect .card-content {
+  flex: 1;
+}
+
+/* Hover effect */
+.card-rect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .card-rect {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .card-rect .card-content {
+    margin: 0;
+  }
+}
+
+
 /* Form */
 form {
   display: flex;
