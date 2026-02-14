@@ -1,0 +1,213 @@
+:root {
+  --primary-color: #d4af37; /* gold accent */
+  --secondary-color: #222;  /* dark background */
+  --accent-color: #444;     /* section cards */
+  --text-color: #f5f5f5;    /* light text */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-btn {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+
+body {
+  font-family: 'Verdana', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #111;
+}
+
+header h1 {
+  font-family: 'Georgia', serif;
+  color: var(--primary-color);
+  font-size: 2.5em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+/* Services & Gallery */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+#style-tips .card {
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+#style-tips .card:hover {
+  transform: scale(1.03);
+}
+
+#style-tips .btn {
+  margin-top: 15px;
+}
+
+
+.card {
+  background-color: var(--accent-color);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #eee;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input, textarea {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #aaa;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
