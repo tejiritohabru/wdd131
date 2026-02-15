@@ -136,6 +136,7 @@ nav a:hover {
   padding: 20px;
   border-radius: 15px;
   width: 300px;
+  max-width: 90%;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   transition: transform 0.3s;
 }
@@ -204,7 +205,21 @@ nav a:hover {
   .service-card-rect {
     flex-direction: column;
     text-align: center;
+    width: 95%;
   }
+
+  @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
   .service-card-rect p {
     margin-left: 0;
@@ -352,6 +367,21 @@ button:hover {
   background-color: #fff;
   color: var(--primary-color);
 }
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    padding: 20px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
 
 /* Footer */
 footer {
@@ -365,7 +395,10 @@ footer {
 @media(max-width:768px){
   nav ul {
     flex-direction: column;
+      gap: 15px;      
+    padding: 10px 0;
   }
+
   .container {
     flex-direction: column;
     align-items: center;
